@@ -10,6 +10,12 @@ body{
     text-align: center;
 }
 
+#head{
+    animation: head 1s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
 .byke{
     padding: 50px 0;
 }
@@ -17,14 +23,6 @@ body{
 #byke{
     animation: bykeAnim 1s ease-in-out infinite alternate;
     transform-origin: bottom;
-}
-
-@keyframes bykeAnim{
-    from{
-        transform: rotateX(0deg);
-    }to{
-        transform: rotateX(17deg);
-    }
 }
 
 #left,
@@ -35,6 +33,22 @@ body{
     transform-box: fill-box;
 }
 
+@keyframes head{
+    from{
+        transform: translateY(0%) rotateZ(0deg);
+    }to{
+        transform: translateY(40%) rotateZ(20deg);
+    }
+}
+
+@keyframes bykeAnim{
+    from{
+        transform: rotateX(0deg);
+    }to{
+        transform: rotateX(17deg);
+    }
+}
+
 @keyframes wheel{
     from{
         transform: rotateZ(0deg);   
@@ -42,3 +56,4 @@ body{
         transform: rotateZ(360deg);
     }
 }
+
