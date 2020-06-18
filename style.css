@@ -4,9 +4,20 @@
     box-sizing: border-box;
 }
 
-body{
-    width: 1270px;
+.container{
+    width: 100%;
+    max-width: 1270px;
     margin: 0 auto;
+}
+
+.svg-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.svg-item{
+    width: 100%;
     text-align: center;
 }
 
@@ -111,3 +122,29 @@ body{
     50%{transform: rotate(4deg)  translateX(-100px) rotateZ(33deg)}
     100%{transform: rotate(0deg) translateX(0);}
 }
+
+/* 1200  */
+
+@media(max-width:1200px){
+    .svg-item{
+        width: 100%;
+        padding: 30px;
+    }
+
+    .svg-item svg{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-width:990px){
+    .svg-item{
+        width: 100%;
+    }
+
+    .svg-item svg{
+        width: 100%;
+        height: auto;
+    }
+}
+
