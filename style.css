@@ -15,14 +15,7 @@
     align-items: center;
     background-color: #535461;
     transition: all .4s linear;
-    /* animation: menuAnim 5s linear infinite; */
 }
-
-/* @keyframes menuAnim{
-    0%{background-color: #535461;}
-    50%{background-color: #53546198;}
-    100%{background-color: #535461;}
-} */
 
 .nav:hover{
     right: 0px;
@@ -50,13 +43,13 @@
 }
 
 .nav-item:hover{
-    /* border: 1px solid black;  */
     margin:-1px;
     scale: 1.2;
     transform: translateX(-10px) rotate(0deg);
     background-color: transparent;
     color: #535461;
 }
+
 
 .container{
     width: 100%;
@@ -70,6 +63,26 @@
     color: #3f3d56;
     font-weight: 700;
     text-transform: uppercase;
+    position: relative;
+    border: 1px solid beige;  
+}
+
+.block{
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: all 1s linear;
+}
+
+.svg-item-title:hover .block{
+    opacity: 1;
 }
 
 .svg-container{
@@ -81,6 +94,18 @@
 .svg-item{
     width: 100%;
     text-align: center;
+}
+
+.gif-img{
+    position: absolute;
+    width: 100%;
+    height:auto;
+    background: url("./assets/gif/pony.gif");
+    background-size: 100% 100%;
+}
+
+.svg-item-title:hover .gif-img{
+    display: block;
 }
 
 /* byke */
@@ -210,3 +235,22 @@
     }
 }
 
+@media(max-width:990px){
+    .nav-item{
+        color: #6c63ff;
+    }
+}
+
+
+.holder{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: green;
+}
+
+
+
+.holder:hover .block{
+    opacity: 1;
+}
