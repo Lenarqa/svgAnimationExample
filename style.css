@@ -33,7 +33,7 @@
     color: #535461;
     
     transition: all .3s linear;    
-    position: relative;  
+    /* position: relative;   */
     margin:-1px; 
 }
 
@@ -64,21 +64,18 @@
     font-weight: 700;
     text-transform: uppercase;
     position: relative;
-    border: 1px solid beige;  
 }
 
 .block{
     margin: 0 auto;
     position: absolute;
     left: 0;
-    right: 0;
-    bottom: 0;
     top: 0;
     max-width: 300px;
     width: 100%;
     height: auto;
     opacity: 0;
-    transition: all 1s linear;
+    transition: all 1s ease;
 }
 
 .svg-item-title:hover .block{
@@ -239,18 +236,4 @@
     .nav-item{
         color: #6c63ff;
     }
-}
-
-
-.holder{
-    position: relative;
-    width: 400px;
-    height: 400px;
-    background-color: green;
-}
-
-
-
-.holder:hover .block{
-    opacity: 1;
 }
